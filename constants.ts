@@ -1,6 +1,6 @@
 
-import { Users, MessageCircle, MapPin, Calendar, CreditCard, Image as ImageIcon, Globe, Bell } from 'lucide-react';
-import { NavItem, Feature, Testimonial, Language } from './types';
+import { Calendar, CreditCard, Image as ImageIcon, Globe } from 'lucide-react';
+import { NavItem, Feature, Language } from './types';
 
 export const APP_NAME = "Jamaa";
 
@@ -39,27 +39,6 @@ export const getFeatures = (lang: Language): Feature[] => {
     }
   ];
 };
-
-export const TESTIMONIALS: Testimonial[] = [
-    {
-        content: "Jamaa has completely transformed how we plan our weekend gatherings. No more chaotic WhatsApp groups.",
-        avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-        name: "Ahmed Al-Saud",
-        role: "Event Organizer"
-    },
-    {
-        content: "The Qatta feature is a lifesaver. Splitting bills for our weekly Esteraha is now automatic and fair.",
-        avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-        name: "Sarah Al-Amri",
-        role: "Student"
-    },
-    {
-        content: "I love the places discovery. We found amazing hidden gems in Riyadh thanks to the community suggestions.",
-        avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-        name: "Faisal Al-Otaibi",
-        role: "Food Blogger"
-    }
-];
 
 export const TRANSLATIONS = {
   en: {

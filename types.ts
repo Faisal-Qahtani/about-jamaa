@@ -12,10 +12,3 @@ export interface Feature {
   description: string;
   icon: LucideIcon;
 }
-
-export interface Testimonial {
-  content: string;
-  avatar: string;
-  name: string;
-  role: string;
-}
