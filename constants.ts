@@ -53,7 +53,7 @@ export const TRANSLATIONS = {
       badge: "The Future of Gatherings",
       sentence: "Your People. Your Plans.",
       highlight: "",
-      desc: "From arranging the weekly Esteraha to planning your next trip to Abha. Jamaa handles the logistics, the chat, and the Qatta—all in one smooth experience.",
+      desc: "From organizing your weekly Esteraha to planning a road trip to Abha, Jamaa takes care of the planning, the group chat, and even splitting the qatta. all in one seamless app.",
       download: "Download APK",
       demo: "View Demo",
       available: "Available on iOS & Android",
@@ -116,7 +116,7 @@ export const TRANSLATIONS = {
     },
     cta: {
       title: "Built for the Saudi Social Life",
-      desc: "Whether it's a quick coffee after class, a weekend at the Esteraha, or a family trip — Jamaa is designed to make your plans feel effortless.",
+      desc: "Whether it's a quick coffee after class, a weekend at the Esteraha, or a family trip... Jamaa is designed to make your plans feel effortless.",
       download: "Download App",
     },
     footer: {
