@@ -28,12 +28,9 @@ const CallToAction: React.FC = () => {
                         <p className="text-secondary text-lg mb-8 opacity-90">
                             {t.desc}
                         </p>
-                        <div className="flex flex-col sm:flex-row justify-center gap-4">
-                             <Button variant="accent" className="w-full sm:w-auto text-lg py-4 rounded-full">
-                                {t.ios}
-                            </Button>
-                            <Button variant="outline" className="w-full sm:w-auto text-lg py-4 rounded-full !text-white !border-white hover:!bg-white hover:!text-primary">
-                                {t.android}
+                        <div className="flex justify-center">
+                            <Button variant="accent" className="w-full sm:w-auto text-lg py-4 px-8 rounded-full">
+                                {t.download}
                             </Button>
                         </div>
                     </div>

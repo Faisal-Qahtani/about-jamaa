@@ -66,18 +66,18 @@ export const TRANSLATIONS = {
         title: "Plan Gatherings in Minutes",
         desc: "Whether it's booking the Esteraha, planning a Kashta, or just a family dinner. Jamaa keeps everyone on the same page.",
         bullets: [
-          "Create a gathering room instantly",
-          "Invite friends via WhatsApp link",
-          "Set repeating events (e.g. Weekly Thursday)",
-          "Track RSVPs effortlessly",
+          "Create a virtual gathering room instantly",
+          "Invite your friends or family instantly",
+          "Manage members with one tap",
+          "Even schedule repeating gatherings (daily, weekly, monthly)",
         ],
       },
       chat: {
         title: "Chat Together in One Place",
-        desc: "Keep the group chat focused. Share locations, vote on dinner, and track who's bringing the Baloot cards—all without the noise.",
+        desc: "KEvery gathering includes its own group chat. clean, organized, and dedicated.",
         bullets: [
-          "Dedicated chat for every event",
-          "Share live locations & photos",
+          "Send messages instantly",
+          "Share photos, videos, and links",
           "Built-in polls for group decisions",
           "Smart AI assistant for suggestions",
         ],
@@ -86,10 +86,10 @@ export const TRANSLATIONS = {
         title: "Find the Perfect Spot",
         desc: "From specialized coffee shops to fine dining in the latest zones. Discover places that fit your vibe and budget.",
         bullets: [
-          "Search top-rated cafes & restaurants",
-          "Filter by price and vibe",
-          "Group voting system",
-          "Surprise Mode for spontaneous nights",
+          "Search cafés, restaurants, events, and fun spots",
+          "Get smart recommendations based on your group’s preferences",
+          "Vote on suggested places",
+          "Or choose Surprise Mode and let Jamaa pick a spot for you",
         ],
       },
     },
@@ -116,9 +116,8 @@ export const TRANSLATIONS = {
     },
     cta: {
       title: "Built for the Saudi Social Life",
-      desc: "Whether it’s a quick coffee after class, a weekend at the Esteraha, or a family trip — Jamaa is designed to make your plans feel effortless.",
-      ios: "Download for iOS",
-      android: "Download for Android",
+      desc: "Whether it's a quick coffee after class, a weekend at the Esteraha, or a family trip — Jamaa is designed to make your plans feel effortless.",
+      download: "Download App",
     },
     footer: {
       tagline: "Plan better. Decide faster. Enjoy more.",
@@ -264,8 +263,7 @@ export const TRANSLATIONS = {
     cta: {
       title: "مصمم للحياة الاجتماعية السعودية",
       desc: "سواء كانت قهوة سريعة بعد الجامعة، ويكند في الاستراحة، أو سفرة عائلية... جمعة مصمم عشان يخلي خططكم أسهل.",
-      ios: "حمل للآيفون",
-      android: "حمل للأندرويد",
+      download: "حمل التطبيق",
     },
     footer: {
       tagline: "خطط أفضل. قرر أسرع. استمتع أكثر.",
