@@ -39,7 +39,7 @@ const Team: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-secondary/5 relative overflow-hidden">
+    <section id="team" className="py-24 bg-secondary/5 relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>

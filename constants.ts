@@ -10,6 +10,7 @@ export const getNavItems = (lang: Language): NavItem[] => {
     { label: t.nav.chat, href: "#chat" },
     { label: t.nav.places, href: "#places" },
     { label: t.nav.features, href: "#features" },
+    { label: t.nav.team, href: "#team" },
   ];
 };
 
@@ -46,6 +47,7 @@ export const TRANSLATIONS = {
       chat: "Chat",
       places: "Places",
       features: "Features",
+      team: "Team",
       getApp: "Get App",
       download: "Download Now",
     },
@@ -219,6 +221,7 @@ export const TRANSLATIONS = {
       chat: "دردش",
       places: "أماكن",
       features: "ميزات",
+      team: "الفريق",
       getApp: "حمل التطبيق",
       download: "حمل الآن",
     },
