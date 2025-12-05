@@ -119,6 +119,33 @@ export const TRANSLATIONS = {
       desc: "Whether it's a quick coffee after class, a weekend at the Esteraha, or a family trip... Jamaa is designed to make your plans feel effortless.",
       download: "Download App",
     },
+    team: {
+      title: "Meet the Team",
+      subtitle: "The Minds Behind Jamaa",
+      desc: "A dedicated group of developers and designers built this platform to elevate your social gatherings.",
+      members: [
+        {
+          name: "Faisal Al-Qahtani",
+          role: "Product Owner & Full Stack Developer"
+        },
+        {
+          name: "Turki Al-Qobaisi",
+          role: "Scrum Master & Backend Developer"
+        },
+        {
+          name: "Haithem Herbadji",
+          role: "UI/UX Designer & Frontend Developer"
+        },
+        {
+          name: "Mohammed Al-Humead",
+          role: "UI/UX Designer & Frontend Developer"
+        },
+        {
+          name: "Khalid bin Khatlah",
+          role: "Full Stack Developer & Tester"
+        }
+      ]
+    },
     footer: {
       tagline: "Plan better. Decide faster. Enjoy more.",
       product: "Product",
@@ -264,6 +291,33 @@ export const TRANSLATIONS = {
       title: "مصمم للحياة الاجتماعية السعودية",
       desc: "سواء كانت قهوة سريعة بعد الجامعة، ويكند في الاستراحة، أو سفرة عائلية... جمعة مصمم عشان يخلي خططكم أسهل.",
       download: "حمل التطبيق",
+    },
+    team: {
+      title: "فريق العمل",
+      subtitle: "العقول خلف جمعة",
+      desc: "مجموعة مخلصة من المطورين والمصممين بنوا هذه المنصة لترتقي بجمعاتكم.",
+      members: [
+        {
+          name: "فيصل القحطاني",
+          role: "مالك المنتج ومطور شامل"
+        },
+        {
+          name: "تركي القبيسي",
+          role: "سكروم ماستر ومطور خلفية"
+        },
+        {
+          name: "هيثم عرباجي",
+          role: "مصمم واجهة وتجربة مستخدم ومطور واجهة"
+        },
+        {
+          name: "محمد الحميد",
+          role: "مصمم واجهة وتجربة مستخدم ومطور واجهة"
+        },
+        {
+          name: "خالد بن خطلة",
+          role: "مطور شامل ومختبر"
+        }
+      ]
     },
     footer: {
       tagline: "خطط أفضل. قرر أسرع. استمتع أكثر.",
