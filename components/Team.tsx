@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Crown, ListTodo, Palette, PenTool, SearchCode } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { TRANSLATIONS } from '../constants';
 
@@ -7,14 +8,13 @@ const Team: React.FC = () => {
   const { language } = useLanguage();
   const t = (TRANSLATIONS[language] as any).team;
 
-  const getInitials = (name: string) => {
-    return name
-      .split(' ')
-      .map(n => n[0])
-      .join('')
-      .substring(0, 2)
-      .toUpperCase();
-  };
+  const memberIcons = [
+    Crown,       // Faisal: Product Owner (Leadership)
+    ListTodo,    // Turki: Scrum Master (Task Management)
+    Palette,     // Haithem: UI/UX (Visual Design)
+    PenTool,     // Mohammed: UI/UX (Vector/Detail Design)
+    SearchCode   // Khalid: Tester (Code Inspection)
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -37,15 +37,6 @@ const Team: React.FC = () => {
       }
     }
   };
-
-  // Assign distinct gradient accents to each card for variety
-  const gradients = [
-    "from-blue-400 to-indigo-500",
-    "from-purple-400 to-fuchsia-500",
-    "from-rose-400 to-orange-500",
-    "from-emerald-400 to-teal-500",
-    "from-cyan-400 to-sky-500",
-  ];
 
   return (
     <section className="py-24 bg-secondary/5 relative overflow-hidden">
@@ -94,6 +85,7 @@ const Team: React.FC = () => {
              // Alternate between primary and accent colors
              const isPrimary = index % 2 === 0;
              const bgClass = isPrimary ? "bg-primary" : "bg-accent";
+             const Icon = memberIcons[index % memberIcons.length];
              
              return (
               <motion.div 
@@ -103,7 +95,7 @@ const Team: React.FC = () => {
                 className="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-secondary/10 flex flex-col items-center text-center group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-2rem)] max-w-sm"
               >
                 <div className={`w-24 h-24 rounded-full ${bgClass} mb-6 flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:shadow-2xl group-hover:scale-110 transition-transform duration-300`}>
-                  {getInitials(member.name)}
+                  <Icon size={40} strokeWidth={1.5} />
                 </div>
                 
                 <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors duration-300">
