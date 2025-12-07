@@ -317,7 +317,11 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
     projectNote: {
       badge: "قصة المشروع",
       title: "بناء جمعة",
-      desc: "تم تطوير هذه التجربة ضمن مقرر SWE444 في جامعة الملك سعود. أنهى الفريق المشروع بنجاح، وشكر خاص للدكتور سلطان السرة على دعمه وتوجيهه.",
+      desc: `تم تطوير هذه التجربة ضمن مقرر SWE444 في جامعة الملك سعود. طوال الفصل، عمل فريقنا معًا على تصميم وتطوير وتحسين المشروع باستخدام ممارسات هندسة برمجيات واقعية.
+
+نفخر بأننا سلّمنا المنتج النهائي بنجاح، موضحين كفاءتنا التقنية وروح الفريق، وبفضل المنهجيات والهياكل التعليمية التي ركز عليها المقرر.
+
+نتقدم بخالص الشكر للدكتور سلطان السراء على توجيهه ودعمه وتعليقاته القيّمة التي أثرت قرارات التصميم ورفعت جودة العمل.`,
       imageAlt: "صورة فريق جمعة"
     },
     team: {
@@ -327,32 +331,32 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
       members: [
         {
           name: "فيصل القحطاني",
-          role: "مالك المنتج ومطور شامل",
+          role: "Product Owner & Full Stack Developer",
           photo: "assets/faisal.png",
           linkedin: "https://www.linkedin.com/in/faisal-al-qahtani"
         },
         {
           name: "تركي القبيسي",
-          role: "سكرم ماستر ومطور خلفية",
+          role: "Scrum Master & Backend Developer",
           linkedin: "https://www.linkedin.com/in/turki-al-qobaisi"
         },
         {
           name: "هيثم هرباجي",
-          role: "مصمم واجهة وتجربة مستخدم ومطور واجهة",
+          role: "UI/UX Designer & Frontend Developer",
           photo: "assets/haithem.jpeg",
-          linkedin: "https://www.linkedin.com/in/haithem-herbadji"
+          linkedin: "https://www.linkedin.com/in/haithemherbadji/"
         },
         {
           name: "محمد الحميد",
-          role: "مصمم واجهة وتجربة مستخدم ومطور واجهة",
+          role: "UI/UX Designer & Frontend Developer",
           photo: "assets/mohammed.png",
           linkedin: "https://www.linkedin.com/in/mohammed-al-humead"
         },
         {
-          name: "خالد بن ختلة",
-          role: "مطور شامل ومختبر",
+          name: "خالد بن خثلة",
+          role: "Full Stack Developer & Tester",
           photo: "assets/khalid.png",
-          linkedin: "https://www.linkedin.com/in/khalid-bin-khatlah"
+          linkedin: "https://www.linkedin.com/in/khalid-bin-khatlah-5b1282346/"
         }
       ]
     },
