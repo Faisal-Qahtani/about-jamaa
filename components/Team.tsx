@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Crown, ListTodo, Palette, PenTool, SearchCode } from 'lucide-react';
+import { Award, ListTodo, Palette, PenTool, SearchCode } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { TRANSLATIONS } from '../constants';
 
@@ -9,7 +9,7 @@ const Team: React.FC = () => {
   const t = (TRANSLATIONS[language] as any).team;
 
   const memberIcons = [
-    Crown,       // Faisal: Product Owner (Leadership)
+    Award,       // Faisal: Product Owner (Leadership/Recognition)
     ListTodo,    // Turki: Scrum Master (Task Management)
     Palette,     // Haithem: UI/UX (Visual Design)
     PenTool,     // Mohammed: UI/UX (Vector/Detail Design)
@@ -86,16 +86,33 @@ const Team: React.FC = () => {
              const isPrimary = index % 2 === 0;
              const bgClass = isPrimary ? "bg-primary" : "bg-accent";
              const Icon = memberIcons[index % memberIcons.length];
+             const hasLink = Boolean(member.linkedin);
              
              return (
-              <motion.div 
+              <motion.a 
                 key={index}
                 variants={itemVariants}
-                whileHover={{ y: -8 }}
-                className="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-secondary/10 flex flex-col items-center text-center group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-2rem)] max-w-sm"
+                whileHover={{ y: hasLink ? -8 : 0 }}
+                href={member.linkedin || undefined}
+                target={hasLink ? "_blank" : undefined}
+                rel={hasLink ? "noreferrer" : undefined}
+                className={`bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-secondary/10 flex flex-col items-center text-center group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-2rem)] max-w-sm ${hasLink ? "cursor-pointer" : "cursor-default"}`}
               >
-                <div className={`w-24 h-24 rounded-full ${bgClass} mb-6 flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:shadow-2xl group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon size={40} strokeWidth={1.5} />
+                <div className="relative mb-6">
+                  <div className={`absolute inset-0 rounded-full ${bgClass} blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-300`}></div>
+                  <div className="relative w-28 h-28 rounded-full overflow-hidden border-4 border-white shadow-lg ring-4 ring-primary/10">
+                    {member.photo && (
+                      <img
+                        src={member.photo}
+                        alt={`${member.name} photo`}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    )}
+                  </div>
+                  <div className={`absolute -bottom-2 -right-2 w-12 h-12 rounded-full ${bgClass} flex items-center justify-center text-white shadow-lg`}>
+                    <Icon size={26} strokeWidth={1.5} />
+                  </div>
                 </div>
                 
                 <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors duration-300">
@@ -107,7 +124,7 @@ const Team: React.FC = () => {
                 <p className="text-textSecondary font-medium">
                   {member.role}
                 </p>
-              </motion.div>
+              </motion.a>
              );
            })}
         </motion.div>

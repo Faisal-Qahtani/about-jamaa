@@ -121,6 +121,16 @@ export const TRANSLATIONS = {
       desc: "Whether it's a quick coffee after class, a weekend at the Esteraha, or a family trip... Jamaa is designed to make your plans feel effortless.",
       download: "Download App",
     },
+    projectNote: {
+      badge: "Project Story",
+      title: "Building Jamaa",
+      desc: `This experience was crafted as part of the SWE444 course at King Saud University. Throughout the semester, our team worked collaboratively to design, develop, and refine this project using real-world software engineering practices.
+
+We are proud to have successfully delivered the final product, demonstrating both technical competency and teamwork. This achievement reflects not only our collective effort, but also the structured learning and engineering methodologies emphasized in the course.
+
+We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, constructive feedback, and continuous support. His insights helped shape our direction, enhance our design decisions, and elevate the overall quality of our work.`,
+      imageAlt: "Jamaa team group photo"
+    },
     team: {
       title: "Meet the Team",
       subtitle: "The Minds Behind Jamaa",
@@ -128,23 +138,32 @@ export const TRANSLATIONS = {
       members: [
         {
           name: "Faisal Al-Qahtani",
-          role: "Product Owner & Full Stack Developer"
+          role: "Product Owner & Full Stack Developer",
+          photo: "assets/faisal.png",
+          linkedin: "https://www.linkedin.com/in/faisal-alqahtani-2b5ba327a/"
         },
         {
           name: "Turki Al-Qobaisi",
-          role: "Scrum Master & Backend Developer"
+          role: "Scrum Master & Backend Developer",
+          linkedin: "https://www.linkedin.com/in/turki-al-qobaisi"
         },
         {
           name: "Haithem Herbadji",
-          role: "UI/UX Designer & Frontend Developer"
+          role: "UI/UX Designer & Frontend Developer",
+          photo: "assets/haithem.jpeg",
+          linkedin: "https://www.linkedin.com/in/haithem-herbadji"
         },
         {
           name: "Mohammed Al-Humead",
-          role: "UI/UX Designer & Frontend Developer"
+          role: "UI/UX Designer & Frontend Developer",
+          photo: "assets/mohammed.png",
+          linkedin: "https://www.linkedin.com/in/mohammed-al-humead"
         },
         {
           name: "Khalid bin Khatlah",
-          role: "Full Stack Developer & Tester"
+          role: "Full Stack Developer & Tester",
+          photo: "assets/khalid.png",
+          linkedin: "https://www.linkedin.com/in/khalid-bin-khatlah"
         }
       ]
     },
@@ -295,6 +314,12 @@ export const TRANSLATIONS = {
       desc: "سواء كانت قهوة سريعة بعد الجامعة، ويكند في الاستراحة، أو سفرة عائلية... جمعة مصمم عشان يخلي خططكم أسهل.",
       download: "حمل التطبيق",
     },
+    projectNote: {
+      badge: "قصة المشروع",
+      title: "بناء جمعة",
+      desc: "تم تطوير هذه التجربة ضمن مقرر SWE444 في جامعة الملك سعود. أنهى الفريق المشروع بنجاح، وشكر خاص للدكتور سلطان السرة على دعمه وتوجيهه.",
+      imageAlt: "صورة فريق جمعة"
+    },
     team: {
       title: "الفريق",
       subtitle: "العقول خلف جمعة",
@@ -302,23 +327,32 @@ export const TRANSLATIONS = {
       members: [
         {
           name: "فيصل القحطاني",
-          role: "مالك المنتج ومطور شامل"
+          role: "مالك المنتج ومطور شامل",
+          photo: "assets/faisal.png",
+          linkedin: "https://www.linkedin.com/in/faisal-al-qahtani"
         },
         {
           name: "تركي القبيسي",
-          role: "سكرم ماستر ومطور خلفية"
+          role: "سكرم ماستر ومطور خلفية",
+          linkedin: "https://www.linkedin.com/in/turki-al-qobaisi"
         },
         {
           name: "هيثم هرباجي",
-          role: "مصمم واجهة وتجربة مستخدم ومطور واجهة"
+          role: "مصمم واجهة وتجربة مستخدم ومطور واجهة",
+          photo: "assets/haithem.jpeg",
+          linkedin: "https://www.linkedin.com/in/haithem-herbadji"
         },
         {
           name: "محمد الحميد",
-          role: "مصمم واجهة وتجربة مستخدم ومطور واجهة"
+          role: "مصمم واجهة وتجربة مستخدم ومطور واجهة",
+          photo: "assets/mohammed.png",
+          linkedin: "https://www.linkedin.com/in/mohammed-al-humead"
         },
         {
           name: "خالد بن ختلة",
-          role: "مطور شامل ومختبر"
+          role: "مطور شامل ومختبر",
+          photo: "assets/khalid.png",
+          linkedin: "https://www.linkedin.com/in/khalid-bin-khatlah"
         }
       ]
     },

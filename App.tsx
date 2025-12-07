@@ -6,6 +6,7 @@ import DetailedFeatures from './components/DetailedFeatures';
 import Team from './components/Team';
 import Footer from './components/Footer';
 import CallToAction from './components/CallToAction';
+import ProjectNote from './components/ProjectNote';
 import { LanguageProvider } from './LanguageContext';
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         <Features />
         <Team />
         <CallToAction />
+        <ProjectNote />
         <Footer />
       </main>
     </LanguageProvider>
