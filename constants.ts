@@ -151,19 +151,19 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
           name: "Haithem Herbadji",
           role: "UI/UX Designer & Frontend Developer",
           photo: "assets/haithem.jpeg",
-          linkedin: "https://www.linkedin.com/in/haithem-herbadji"
+          linkedin: "https://www.linkedin.com/in/haithemherbadji/"
         },
         {
           name: "Mohammed Al-Humead",
           role: "UI/UX Designer & Frontend Developer",
           photo: "assets/mohammed.png",
-          linkedin: "https://www.linkedin.com/in/mohammed-al-humead"
+          linkedin: "https://www.linkedin.com/in/mohammed-alhumead-4a42a73a0/"
         },
         {
           name: "Khalid bin Khatlah",
           role: "Full Stack Developer & Tester",
           photo: "assets/khalid.png",
-          linkedin: "https://www.linkedin.com/in/khalid-bin-khatlah"
+          linkedin: "https://www.linkedin.com/in/khalid-bin-khatlah-5b1282346/"
         }
       ]
     },
@@ -333,7 +333,7 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
           name: "فيصل القحطاني",
           role: "Product Owner & Full Stack Developer",
           photo: "assets/faisal.png",
-          linkedin: "https://www.linkedin.com/in/faisal-al-qahtani"
+          linkedin: "https://www.linkedin.com/in/faisal-alqahtani-2b5ba327a/"
         },
         {
           name: "تركي القبيسي",
@@ -350,7 +350,7 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
           name: "محمد الحميد",
           role: "UI/UX Designer & Frontend Developer",
           photo: "assets/mohammed.png",
-          linkedin: "https://www.linkedin.com/in/mohammed-al-humead"
+          linkedin: "https://www.linkedin.com/in/mohammed-alhumead-4a42a73a0/"
         },
         {
           name: "خالد بن خثلة",
