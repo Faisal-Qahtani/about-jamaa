@@ -183,7 +183,7 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
           name: "Turki Al-Qobaisi",
           role: "Scrum Master & Backend Developer",
           photo: "assets/turki.png",
-          linkedin: "https://www.linkedin.com/in/turki-al-qobaisi"
+          linkedin: "https://www.linkedin.com/in/turki-alqobaisi-641192368/"
         },
         {
           name: "Haithem Herbadji",
@@ -393,7 +393,7 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
           name: "تركي القبيسي",
           role: "Scrum Master & Backend Developer",
           photo: "assets/turki.png",
-          linkedin: "https://www.linkedin.com/in/turki-al-qobaisi"
+          linkedin: "https://www.linkedin.com/in/turki-alqobaisi-641192368/"
         },
         {
           name: "هيثم هرباجي",
