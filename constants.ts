@@ -1,0 +1,485 @@
+import { Calendar, CreditCard, Image as ImageIcon, Globe, Sparkles, MapPin, LocateFixed, Wand2 } from "lucide-react";
+import { NavItem, Feature, Language } from "./types";
+
+export const APP_NAME = "Jamaa";
+export const APK_URL = "https://github.com/Faisal-Qahtani/jamaa/releases/download/2.0.1/app-release.apk";
+
+export const getNavItems = (lang: Language): NavItem[] => {
+  const t = TRANSLATIONS[lang];
+  return [
+    { label: t.nav.plan, href: "#plan" },
+    { label: t.nav.chat, href: "#chat" },
+    { label: t.nav.places, href: "#places" },
+    { label: t.nav.features, href: "#features" },
+    { label: t.nav.team, href: "#team" },
+  ];
+};
+
+export const getFeatures = (lang: Language): Feature[] => {
+  const t = TRANSLATIONS[lang];
+  return [
+    {
+      title: t.features.scheduling.title,
+      description: t.features.scheduling.desc,
+      icon: Calendar,
+    },
+    {
+      title: t.features.qatta.title,
+      description: t.features.qatta.desc,
+      icon: CreditCard,
+    },
+    {
+      title: t.features.memories.title,
+      description: t.features.memories.desc,
+      icon: ImageIcon,
+    },
+    {
+      title: t.features.aiSuggestions.title,
+      description: t.features.aiSuggestions.desc,
+      icon: Sparkles,
+    },
+    {
+      title: t.features.randomLocation.title,
+      description: t.features.randomLocation.desc,
+      icon: MapPin,
+    },
+    {
+      title: t.features.centralLocation.title,
+      description: t.features.centralLocation.desc,
+      icon: LocateFixed,
+    },
+    {
+      title: t.features.aiPosters.title,
+      description: t.features.aiPosters.desc,
+      icon: Wand2,
+    },
+    {
+      title: t.features.travel.title,
+      description: t.features.travel.desc,
+      icon: Globe,
+    },
+  ];
+};
+
+export const TRANSLATIONS = {
+  en: {
+    nav: {
+      plan: "Plan",
+      chat: "Chat",
+      places: "Places",
+      features: "Features",
+      team: "Team",
+      getApp: "Get App",
+      download: "Download Now",
+    },
+    hero: {
+      badge: "The Future of Gatherings",
+      sentence: "Your People. Your Plans. Your Places.",
+      highlight: "",
+      desc: "From organizing your weekly coffee meeting to planning a road trip to Abha, Jamaa takes care of the planning, the group chat, and even splitting the qatta. all in one seamless app.",
+      download: "Download APK",
+      demo: "View Demo",
+      available: "Available on iOS & Android",
+      free: "Free for everyone",
+      location: "Gathering Point",
+      locationName: "Bujairi Terrace",
+    },
+    detailed: {
+      plan: {
+        title: "Plan Gatherings in Minutes",
+        desc: "Whether it's booking the Esteraha, planning a Kashta, or just a family dinner. Jamaa keeps everyone on the same page.",
+        bullets: [
+          "Create a virtual gathering room instantly",
+          "Invite your friends or family instantly",
+          "Manage members with one tap",
+          "Even schedule repeating gatherings (daily, weekly, monthly)",
+        ],
+      },
+      chat: {
+        title: "Chat Together in One Place",
+        desc: "KEvery gathering includes its own group chat. clean, organized, and dedicated.",
+        bullets: [
+          "Send messages instantly",
+          "Share photos, videos, and links",
+          "Built-in polls for group decisions",
+          "Smart AI assistant for suggestions",
+        ],
+      },
+      places: {
+        title: "Find the Perfect Spot",
+        desc: "From specialized coffee shops to fine dining in the latest zones. Discover places that fit your vibe and budget.",
+        bullets: [
+          "Search cafés, restaurants, events, and fun spots",
+          "Get smart recommendations based on your group’s preferences",
+          "Vote on suggested places",
+          "Or choose Surprise Mode and let Jamaa pick a spot for you",
+        ],
+      },
+    },
+    features: {
+      title: "Everything You Need to",
+      titleHighlight: "Connect",
+      desc: "From the weekly Esteraha to your big summer trip, we have the tools to make it happen.",
+      scheduling: {
+        title: "Smart Scheduling",
+        desc: "Coordinate timings easily. We'll find the perfect slot that works for everyone's schedule.",
+      },
+      qatta: {
+        title: "Split the Qatta",
+        desc: "No more awkward math at the Esteraha. Jamaa tracks who paid what and settles the Qatta fairly.",
+      },
+      memories: {
+        title: "Memories Saved",
+        desc: "From the Kashta to the Chalet, all your photos and videos are saved automatically in one shared album.",
+      },
+      aiSuggestions: {
+        title: "AI Suggestions",
+        desc: "Get smart recommendations for places that match your group's vibe.",
+      },
+      randomLocation: {
+        title: "Random Location Picker",
+        desc: "Let Jamaa pick a fun surprise spot for everyone automatically.",
+      },
+      centralLocation: {
+        title: "Central Location Picker",
+        desc: "Find the fairest midpoint so everyone meets in the middle.",
+      },
+      aiPosters: {
+        title: "AI Generated Posters",
+        desc: "Create share-ready gathering posters automatically with one tap.",
+      },
+      travel: {
+        title: "Travel Mode",
+        desc: "Planning a road trip to AlUla or a flight to London? Manage flights, hotels, and itinerary in one place.",
+      },
+    },
+    cta: {
+      title: "Built for the Saudi Social Life",
+      desc: "Whether it's a quick coffee after class, a weekend at the Esteraha, or a family trip... Jamaa is designed to make your plans feel effortless.",
+      download: "Download App",
+    },
+    projectNote: {
+      badge: "Project Story",
+      title: "Building Jamaa",
+      desc: `This experience was crafted as part of the SWE444 course at King Saud University. Throughout the semester, our team worked collaboratively to design, develop, and refine this project using real-world software engineering practices.
+
+We are proud to have successfully delivered the final product, demonstrating both technical competency and teamwork. This achievement reflects not only our collective effort, but also the structured learning and engineering methodologies emphasized in the course.
+
+We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, constructive feedback, and continuous support. His insights helped shape our direction, enhance our design decisions, and elevate the overall quality of our work.`,
+      imageAlt: "Jamaa team group photo"
+    },
+    team: {
+      title: "Meet the Team",
+      subtitle: "The Minds Behind Jamaa",
+      desc: "A dedicated group of developers and designers built this platform to elevate your social gatherings.",
+      members: [
+        {
+          name: "Faisal Al-Qahtani",
+          role: "Product Owner & Full Stack Developer",
+          photo: "assets/faisal.png",
+          linkedin: "https://www.linkedin.com/in/faisal-alqahtani-2b5ba327a/"
+        },
+        {
+          name: "Turki Al-Qobaisi",
+          role: "Scrum Master & Backend Developer",
+          photo: "assets/turki.png",
+          linkedin: "https://www.linkedin.com/in/turki-alqobaisi-641192368/"
+        },
+        {
+          name: "Haithem Herbadji",
+          role: "UI/UX Designer & Frontend Developer",
+          photo: "assets/haithem.jpeg",
+          linkedin: "https://www.linkedin.com/in/haithemherbadji/"
+        },
+        {
+          name: "Mohammed Al-Humead",
+          role: "UI/UX Designer & Frontend Developer",
+          photo: "assets/mohammed.png",
+          linkedin: "https://www.linkedin.com/in/mohammed-alhumead-4a42a73a0/"
+        },
+        {
+          name: "Khalid bin Khatlah",
+          role: "Full Stack Developer & Tester",
+          photo: "assets/khalid.png",
+          linkedin: "https://www.linkedin.com/in/khalid-bin-khatlah-5b1282346/"
+        }
+      ]
+    },
+    footer: {
+      tagline: "Plan better. Decide faster. Enjoy more.",
+      product: "Product",
+      legal: "Legal",
+      links: {
+        features: "Features",
+        pricing: "Pricing",
+        download: "Download",
+        privacy: "Privacy Policy",
+        terms: "Terms of Service",
+        cookies: "Cookie Policy",
+      },
+      rights: "All rights reserved.",
+      designed: "Designed for your social life.",
+    },
+    mockup: {
+      home: {
+        welcome: "Ya Hala, Faisal! 👋",
+        subtitle: "Ready for the weekend?",
+        tonight: "TONIGHT",
+        padel: "Padel Match 🎾",
+        date: "Today, 10:00 PM",
+        gatherings: "Your Gatherings",
+        kashta: "Kashta ⛺️",
+        esteraha: "Thursday Esteraha",
+        family: "Family Friday ❤️",
+        locDropped: "Location dropped!",
+        qattaMsg: "Qatta is 150 SAR each",
+        lunchMsg: "Lunch at Grandma's",
+      },
+      plan: {
+        title: "New Gathering",
+        name: "Event Name",
+        nameVal: "Weekend Esteraha",
+        time: "Date & Time",
+        timeVal: "Thu, Nov 24",
+        timeLabel: "9:00 PM",
+        invite: "Invite Friends",
+        btn: "Create Event",
+        repeat: "Repeat",
+        daily: "Daily",
+        weekly: "Weekly",
+        monthly: "Monthly",
+      },
+      chat: {
+        groupName: "Shabab Al-Khobar 🇸🇦",
+        members: "8 members",
+        msg1: "Who's bringing the Baloot cards? ♠️",
+        msg2: "I got them. Is the coffee secured?",
+        poll: "Poll",
+        pollQ: "Dinner tonight?",
+        pollOpt1: "Mandi 🍖",
+        pollOpt2: "Burgers 🍔",
+        type: "Type a message...",
+      },
+      places: {
+        search: "Search for lounges, cafes...",
+        popular: "Popular Nearby",
+        place1: "Najd Village",
+        place1Type: "Saudi Cuisine • SAR 85",
+        place2: "Half Million",
+        place2Type: "Specialty Coffee • SAR 18",
+        menu: "Menu",
+        vote: "Vote",
+      },
+    },
+  },
+  ar: {
+    nav: {
+      plan: "خطط",
+      chat: "دردش",
+      places: "أماكن",
+      features: "ميزات",
+      team: "الفريق",
+      getApp: "حمل التطبيق",
+      download: "حمل الآن",
+    },
+    hero: {
+      badge: "مستقبل الجمعات",
+      sentence: "ربعك، أهلك، خططكم… كلّها في تطبيق واحد.",
+      highlight: "",
+      desc: "مع جمعة ما عاد فيه صجة التخطيط. أنشئ جمعتك، اختاروا المكان، دردشوا، وانتظموا وكلها بتجربة بسيطة ومرتّبة. طلعات، عزايم، قهوة، مذاكرة… كلها تصير أسهل.",
+      download: "حمل التطبيق",
+      demo: "جرب التطبيق",
+      available: "متوفر على iOS و Android",
+      free: "مجاني للجميع",
+      location: "نقطة التجمع",
+      locationName: "مطل البجيري",
+    },
+    detailed: {
+      plan: {
+        title: "خطط لجمعاتك في ثواني",
+        desc: "ودّع كثرة الرسائل واللخبطة بين التطبيقات. مع Jamaa تقدر:",
+        bullets: [
+          "تنشئ جمعة بثواني",
+          "تعزم أصحابك أو أهلك بسهولة",
+          "تنظّم الحضور والمغادرة بلمسة وحدة",
+          "تكرّر جمعتك الأسبوعية أو الشهرية تلقائيًا",
+        ],
+      },
+      chat: {
+        title: "شات مرتب… لكل جمعة مساحة خاصة",
+        desc: "لكل جمعة شاتها الخاص... نظيف، واضح، ومرتّب. ولا ضياع للمعلومات وسط زحمة الواتساب. تقدّرون فيه:",
+        bullets: [
+          "تتراسلون مباشرة",
+          "تشاركون صور، روابط، مواقع، وفيديوهات",
+          "تسوّون تصويتات وألعاب خفيفة",
+          "تستفيدون من المساعد الذكي داخل الشات",
+        ],
+      },
+      places: {
+        title: "اكتشف المكان المثالي",
+        desc: "من قهاوي مختصة لأماكن عشاء راقية في أجدد المناطق. اكتشف أماكن تناسب جوكم وميزانيتكم.",
+        bullets: [
+          "ابحث عن أفضل الكافيهات والمطاعم",
+          "فلتر الفعاليات، المطاعم والكافيهات",
+          "نظام تصويت للمجموعة",
+          "وضع المفاجأة لطلعات عفوية",
+        ],
+      },
+    },
+    features: {
+      title: "كل اللي تحتاجه عشان",
+      titleHighlight: "تضبط جمعتكم",
+      desc: "من استراحة الخميس لسفرة الصيف الكبيرة، عندنا الأدوات اللي تضبط وضعكم.",
+      scheduling: {
+        title: "تنسيق الوقت",
+        desc: "نسقوا المواعيد بسهولة. بنلقى لكم الوقت اللي يناسب جدول الكل.",
+      },
+      qatta: {
+        title: "اقسم القطة",
+        desc: "لا تشيل هم الحساب في الاستراحة. جمعة يحسب مين دفع ويسوي القطة بالعدل.",
+      },
+      memories: {
+        title: "ذكريات محفوظة",
+        desc: "من الكشتة للشاليه، كل صوركم وفيديوهاتكم تنحفظ تلقائياً في ألبوم مشترك.",
+      },
+      aiSuggestions: {
+        title: "اقتراحات بالذكاء الاصطناعي",
+        desc: "نوصي بأماكن تناسب ذوق مجموعتكم تلقائياً.",
+      },
+      randomLocation: {
+        title: "اختيار موقع عشوائي",
+        desc: "دَع التطبيق يقترح وجهة مفاجِئة قريبة للجميع.",
+      },
+      centralLocation: {
+        title: "اختيار موقع متوسط",
+        desc: "نحسب نقطة منتصف عادلة ليصل الجميع بسهولة.",
+      },
+      aiPosters: {
+        title: "ملصقات مولَّدة بالذكاء الاصطناعي",
+        desc: "أنشئ دعوات جذابة للمشاركة مع المجموعة بضغطة زر.",
+      },
+      travel: {
+        title: "وضع السفر",
+        desc: "تخططون لروحة للعلا أو لندن؟ رتبوا الطيران، الفنادق، والجدول في مكان واحد.",
+      },
+    },
+    cta: {
+      title: "مصمم للحياة الاجتماعية السعودية",
+      desc: "سواء كانت قهوة سريعة بعد الجامعة، ويكند في الاستراحة، أو سفرة عائلية... جمعة مصمم عشان يخلي خططكم أسهل.",
+      download: "حمل التطبيق",
+    },
+    projectNote: {
+      badge: "قصة المشروع",
+      title: "بناء جمعة",
+      desc: `تم تطوير هذه التجربة ضمن مقرر SWE444 في جامعة الملك سعود. طوال الفصل، عمل فريقنا معًا على تصميم وتطوير وتحسين المشروع باستخدام ممارسات هندسة برمجيات واقعية.
+
+نفخر بأننا سلّمنا المنتج النهائي بنجاح، موضحين كفاءتنا التقنية وروح الفريق، وبفضل المنهجيات والهياكل التعليمية التي ركز عليها المقرر.
+
+نتقدم بخالص الشكر للدكتور سلطان السراء على توجيهه ودعمه وتعليقاته القيّمة التي أثرت قرارات التصميم ورفعت جودة العمل.`,
+      imageAlt: "صورة فريق جمعة"
+    },
+    team: {
+      title: "الفريق",
+      subtitle: "العقول خلف جمعة",
+      desc: "مجموعة من المطورين والمصممين بنوا هذه المنصة لترتقي بجمعاتكم.",
+      members: [
+        {
+          name: "فيصل القحطاني",
+          role: "Product Owner & Full Stack Developer",
+          photo: "assets/faisal.png",
+          linkedin: "https://www.linkedin.com/in/faisal-alqahtani-2b5ba327a/"
+        },
+        {
+          name: "تركي القبيسي",
+          role: "Scrum Master & Backend Developer",
+          photo: "assets/turki.png",
+          linkedin: "https://www.linkedin.com/in/turki-alqobaisi-641192368/"
+        },
+        {
+          name: "هيثم هرباجي",
+          role: "UI/UX Designer & Frontend Developer",
+          photo: "assets/haithem.jpeg",
+          linkedin: "https://www.linkedin.com/in/haithemherbadji/"
+        },
+        {
+          name: "محمد الحميد",
+          role: "UI/UX Designer & Frontend Developer",
+          photo: "assets/mohammed.png",
+          linkedin: "https://www.linkedin.com/in/mohammed-alhumead-4a42a73a0/"
+        },
+        {
+          name: "خالد بن خثلة",
+          role: "Full Stack Developer & Tester",
+          photo: "assets/khalid.png",
+          linkedin: "https://www.linkedin.com/in/khalid-bin-khatlah-5b1282346/"
+        }
+      ]
+    },
+    footer: {
+      tagline: "خطط أفضل. قرر أسرع. استمتع أكثر.",
+      product: "المنتج",
+      legal: "قانوني",
+      links: {
+        features: "الميزات",
+        pricing: "الأسعار",
+        download: "التحميل",
+        privacy: "سياسة الخصوصية",
+        terms: "شروط الخدمة",
+        cookies: "سياسة الكوكيز",
+      },
+      rights: "كل الحقوق محفوظة.",
+      designed: "صمم لحياتك الاجتماعية.",
+    },
+    mockup: {
+      home: {
+        welcome: "يا هلا فيصل! 👋",
+        subtitle: "جاهز للويكند؟",
+        tonight: "الليلة",
+        padel: "مباراة بادل 🎾",
+        date: "اليوم، ١٠:٠٠ م",
+        gatherings: "جمعاتك",
+        kashta: "كشتة ⛺️",
+        esteraha: "استراحة الخميس",
+        family: "جمعة العائلة ❤️",
+        locDropped: "تم إرسال الموقع!",
+        qattaMsg: "القطة ١٥٠ ريال للشخص",
+        lunchMsg: "الغداء عند الجدة",
+      },
+      plan: {
+        title: "جمعة جديدة",
+        name: "اسم المناسبة",
+        nameVal: "استراحة الويكند",
+        time: "الوقت والتاريخ",
+        timeVal: "الخميس، ٢٤ نوفمبر",
+        timeLabel: "٩:٠٠ م",
+        invite: "اعزم ربعك",
+        btn: "إنشاء المناسبة",
+        repeat: "التكرار",
+        daily: "يومي",
+        weekly: "أسبوعي",
+        monthly: "شهري",
+      },
+      chat: {
+        groupName: "شلة الاستراحة 🎲",
+        members: "٨ أعضاء",
+        msg1: "يا عيال، البلوت مع مين؟ ♠️",
+        msg2: "بالموتر عندي. بس لا تنسون الـ V60 ☕️",
+        poll: "تصويت",
+        pollQ: "العشاء الليلة؟",
+        pollOpt1: "مندي 🍖",
+        pollOpt2: "البيك 🍗",
+        type: "اكتب رسالة...",
+      },
+      places: {
+        search: "ابحث عن لاونج، كوفي...",
+        popular: "الرائج حولك",
+        place1: "قرية نجد",
+        place1Type: "أكل سعودي • ٨٥ ريال",
+        place2: "هاف مليون",
+        place2Type: "قهوة مختصة • ١٨ ريال",
+        menu: "المنيو",
+        vote: "صوت",
+      },
+    },
+  },
+};
