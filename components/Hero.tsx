@@ -5,7 +5,6 @@ import PhoneMockup from './ui/PhoneMockup';
 import { ArrowRight, ArrowLeft, Star, MapPin } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { TRANSLATIONS, APK_URL } from '../constants';
-import jamaaDrawing from '../assets/jamaaDrawing.png';
 
 const Hero: React.FC = () => {
   const { language } = useLanguage();
@@ -56,7 +55,7 @@ const Hero: React.FC = () => {
         <div className="absolute top-0 end-0 -z-10 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl translate-x-1/3 ltr:translate-x-1/3 rtl:-translate-x-1/3 -translate-y-1/4"></div>
         <div className="absolute bottom-0 start-0 -z-10 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl ltr:-translate-x-1/3 rtl:translate-x-1/3 translate-y-1/4"></div>
         <img
-          src={jamaaDrawing}
+          src={"/assets/jamaaDrawing.png"}
           alt="Jamaa illustration"
           className="pointer-events-none select-none absolute top-4 end-0 w-64 md:w-[420px] opacity-80 z-0 -translate-x-10 md:-translate-x-14 -translate-y-6 rtl:translate-x-10 md:rtl:translate-x-14"
         />
