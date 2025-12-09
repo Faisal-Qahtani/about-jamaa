@@ -2,11 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Button from './ui/Button';
 import { useLanguage } from '../LanguageContext';
-import { TRANSLATIONS } from '../constants';
+import { TRANSLATIONS, APK_URL } from '../constants';
 
 const CallToAction: React.FC = () => {
     const { language } = useLanguage();
     const t = TRANSLATIONS[language].cta;
+    const openApk = () => window.open(APK_URL, "_blank", "noopener");
 
     return (
         <section className="py-20 bg-white">
@@ -29,7 +30,7 @@ const CallToAction: React.FC = () => {
                             {t.desc}
                         </p>
                         <div className="flex justify-center">
-                            <Button variant="accent" className="w-full sm:w-auto text-lg py-4 px-8 rounded-full">
+                            <Button variant="accent" className="w-full sm:w-auto text-lg py-4 px-8 rounded-full" onClick={openApk}>
                                 {t.download}
                             </Button>
                         </div>

@@ -1,7 +1,8 @@
-import { Calendar, CreditCard, Image as ImageIcon, Globe } from "lucide-react";
+import { Calendar, CreditCard, Image as ImageIcon, Globe, Sparkles, MapPin, LocateFixed, Wand2 } from "lucide-react";
 import { NavItem, Feature, Language } from "./types";
 
 export const APP_NAME = "Jamaa";
+export const APK_URL = "https://github.com/Faisal-Qahtani/jamaa/releases/download/2.0.1/app-release.apk";
 
 export const getNavItems = (lang: Language): NavItem[] => {
   const t = TRANSLATIONS[lang];
@@ -33,6 +34,26 @@ export const getFeatures = (lang: Language): Feature[] => {
       icon: ImageIcon,
     },
     {
+      title: t.features.aiSuggestions.title,
+      description: t.features.aiSuggestions.desc,
+      icon: Sparkles,
+    },
+    {
+      title: t.features.randomLocation.title,
+      description: t.features.randomLocation.desc,
+      icon: MapPin,
+    },
+    {
+      title: t.features.centralLocation.title,
+      description: t.features.centralLocation.desc,
+      icon: LocateFixed,
+    },
+    {
+      title: t.features.aiPosters.title,
+      description: t.features.aiPosters.desc,
+      icon: Wand2,
+    },
+    {
       title: t.features.travel.title,
       description: t.features.travel.desc,
       icon: Globe,
@@ -53,9 +74,9 @@ export const TRANSLATIONS = {
     },
     hero: {
       badge: "The Future of Gatherings",
-      sentence: "Your People. Your Plans.",
+      sentence: "Your People. Your Plans. Your Places.",
       highlight: "",
-      desc: "From organizing your weekly Esteraha to planning a road trip to Abha, Jamaa takes care of the planning, the group chat, and even splitting the qatta. all in one seamless app.",
+      desc: "From organizing your weekly coffee meeting to planning a road trip to Abha, Jamaa takes care of the planning, the group chat, and even splitting the qatta. all in one seamless app.",
       download: "Download APK",
       demo: "View Demo",
       available: "Available on iOS & Android",
@@ -111,6 +132,22 @@ export const TRANSLATIONS = {
         title: "Memories Saved",
         desc: "From the Kashta to the Chalet, all your photos and videos are saved automatically in one shared album.",
       },
+      aiSuggestions: {
+        title: "AI Suggestions",
+        desc: "Get smart recommendations for places that match your group's vibe.",
+      },
+      randomLocation: {
+        title: "Random Location Picker",
+        desc: "Let Jamaa pick a fun surprise spot for everyone automatically.",
+      },
+      centralLocation: {
+        title: "Central Location Picker",
+        desc: "Find the fairest midpoint so everyone meets in the middle.",
+      },
+      aiPosters: {
+        title: "AI Generated Posters",
+        desc: "Create share-ready gathering posters automatically with one tap.",
+      },
       travel: {
         title: "Travel Mode",
         desc: "Planning a road trip to AlUla or a flight to London? Manage flights, hotels, and itinerary in one place.",
@@ -145,6 +182,7 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
         {
           name: "Turki Al-Qobaisi",
           role: "Scrum Master & Backend Developer",
+          photo: "assets/turki.png",
           linkedin: "https://www.linkedin.com/in/turki-al-qobaisi"
         },
         {
@@ -248,7 +286,7 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
       badge: "مستقبل الجمعات",
       sentence: "ربعك، أهلك، خططكم… كلّها في تطبيق واحد.",
       highlight: "",
-      desc: "مع Jamaa ما عاد فيه صجة التخطيط. أنشئ جمعتك، اختاروا المكان، دردشوا، وانتظموا وكلها بتجربة بسيطة ومرتّبة. طلعات، عزايم، قهوة، مذاكرة… كلها تصير أسهل.",
+      desc: "مع جمعة ما عاد فيه صجة التخطيط. أنشئ جمعتك، اختاروا المكان، دردشوا، وانتظموا وكلها بتجربة بسيطة ومرتّبة. طلعات، عزايم، قهوة، مذاكرة… كلها تصير أسهل.",
       download: "حمل التطبيق",
       demo: "جرب التطبيق",
       available: "متوفر على iOS و Android",
@@ -304,6 +342,22 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
         title: "ذكريات محفوظة",
         desc: "من الكشتة للشاليه، كل صوركم وفيديوهاتكم تنحفظ تلقائياً في ألبوم مشترك.",
       },
+      aiSuggestions: {
+        title: "اقتراحات بالذكاء الاصطناعي",
+        desc: "نوصي بأماكن تناسب ذوق مجموعتكم تلقائياً.",
+      },
+      randomLocation: {
+        title: "اختيار موقع عشوائي",
+        desc: "دَع التطبيق يقترح وجهة مفاجِئة قريبة للجميع.",
+      },
+      centralLocation: {
+        title: "اختيار موقع متوسط",
+        desc: "نحسب نقطة منتصف عادلة ليصل الجميع بسهولة.",
+      },
+      aiPosters: {
+        title: "ملصقات مولَّدة بالذكاء الاصطناعي",
+        desc: "أنشئ دعوات جذابة للمشاركة مع المجموعة بضغطة زر.",
+      },
       travel: {
         title: "وضع السفر",
         desc: "تخططون لروحة للعلا أو لندن؟ رتبوا الطيران، الفنادق، والجدول في مكان واحد.",
@@ -338,6 +392,7 @@ We extend our sincere gratitude to Dr. Sultan Alsarra for his guidance, construc
         {
           name: "تركي القبيسي",
           role: "Scrum Master & Backend Developer",
+          photo: "assets/turki.png",
           linkedin: "https://www.linkedin.com/in/turki-al-qobaisi"
         },
         {

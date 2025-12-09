@@ -4,17 +4,19 @@ import Button from './ui/Button';
 import PhoneMockup from './ui/PhoneMockup';
 import { ArrowRight, ArrowLeft, Star, MapPin } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
-import { TRANSLATIONS } from '../constants';
+import { TRANSLATIONS, APK_URL } from '../constants';
+import jamaaDrawing from '../assets/jamaaDrawing.png';
 
 const Hero: React.FC = () => {
   const { language } = useLanguage();
   const t = TRANSLATIONS[language].hero;
   
   const sentence = t.sentence;
+  const openApk = () => window.open(APK_URL, "_blank", "noopener");
 
-  // For English, split by character. For Arabic, split by word to preserve ligatures.
+  // Split by word for both languages to avoid breaking individual letters across lines.
   const isArabic = language === 'ar';
-  const splitContent = isArabic ? sentence.split(" ") : sentence.split("");
+  const splitContent = sentence.split(" ");
 
   const sentenceVariants: Variants = {
     hidden: { opacity: 1 },
@@ -53,6 +55,11 @@ const Hero: React.FC = () => {
         {/* Background Decorative Blobs */}
         <div className="absolute top-0 end-0 -z-10 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl translate-x-1/3 ltr:translate-x-1/3 rtl:-translate-x-1/3 -translate-y-1/4"></div>
         <div className="absolute bottom-0 start-0 -z-10 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl ltr:-translate-x-1/3 rtl:translate-x-1/3 translate-y-1/4"></div>
+        <img
+          src={jamaaDrawing}
+          alt="Jamaa illustration"
+          className="pointer-events-none select-none absolute top-4 end-0 w-64 md:w-[420px] opacity-80 z-0 -translate-x-10 md:-translate-x-14 -translate-y-6 rtl:translate-x-10 md:rtl:translate-x-14"
+        />
 
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
@@ -66,10 +73,11 @@ const Hero: React.FC = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    {splitContent.map((item, index) => (
-                        <motion.span key={index} variants={letterVariants} className="inline-block">
-                            {item === " " ? "\u00A0" : item}{isArabic && index !== splitContent.length - 1 ? "\u00A0" : ""}
-                        </motion.span>
+                    {splitContent.map((word, index) => (
+                      <motion.span key={index} variants={letterVariants} className="inline-block">
+                        {word}
+                        {index !== splitContent.length - 1 ? "\u00A0" : ""}
+                      </motion.span>
                     ))}
                 </motion.h1>
                 
@@ -90,7 +98,7 @@ const Hero: React.FC = () => {
                     transition={{ delay: 1, duration: 0.8 }}
                     className="flex flex-col sm:flex-row gap-4"
                 >
-                    <Button variant="accent" className="group rounded-full">
+                    <Button variant="accent" className="group rounded-full" onClick={openApk}>
                         {t.download}
                         <ArrowIcon size={18} className="group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
                     </Button>

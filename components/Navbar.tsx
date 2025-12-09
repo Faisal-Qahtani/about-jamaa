@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
-import { APP_NAME, getNavItems, TRANSLATIONS } from "../constants";
+import { APP_NAME, APK_URL, getNavItems, TRANSLATIONS } from "../constants";
 import Button from "./ui/Button";
 import { useLanguage } from "../LanguageContext";
 
@@ -59,6 +59,8 @@ const Navbar: React.FC = () => {
 
   const t = TRANSLATIONS[language];
   const navItems = getNavItems(language);
+  const appName = language === "ar" ? "جمعة" : APP_NAME;
+  const openApk = () => window.open(APK_URL, "_blank", "noopener");
 
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "ar" : "en");
@@ -82,7 +84,7 @@ const Navbar: React.FC = () => {
           className="text-2xl font-bold text-primary flex items-center gap-3"
         >
           <LogoSVG />
-          <span className="tracking-tight">{APP_NAME}</span>
+          <span className="tracking-tight">{appName}</span>
         </a>
 
         {/* Desktop Nav */}
@@ -109,6 +111,7 @@ const Navbar: React.FC = () => {
           <Button
             variant="primary"
             className="px-6 py-2 text-sm h-10 rounded-full"
+            onClick={openApk}
           >
             {t.nav.getApp}
           </Button>
@@ -147,7 +150,7 @@ const Navbar: React.FC = () => {
                 {item.label}
               </a>
             ))}
-            <Button variant="accent" className="w-full mt-4">
+            <Button variant="accent" className="w-full mt-4" onClick={openApk}>
               {t.nav.download}
             </Button>
           </div>

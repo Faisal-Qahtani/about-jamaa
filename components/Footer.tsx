@@ -1,5 +1,5 @@
 import React from "react";
-import { APP_NAME, TRANSLATIONS } from "../constants";
+import { APP_NAME, TRANSLATIONS, APK_URL } from "../constants";
 import { Twitter, Instagram, Linkedin, Github } from "lucide-react";
 import { useLanguage } from "../LanguageContext";
 
@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href={APK_URL} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
                   {t.links.download}
                 </a>
               </li>
