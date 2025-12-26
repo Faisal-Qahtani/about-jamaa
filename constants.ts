@@ -2,7 +2,7 @@ import { Calendar, CreditCard, Image as ImageIcon, Globe, Sparkles, MapPin, Loca
 import { NavItem, Feature, Language } from "./types";
 
 export const APP_NAME = "Jamaa";
-export const APK_URL = "https://github.com/Faisal-Qahtani/about-jamaa/releases/download/v2.0.1/app-release.apk";
+export const APK_URL = "https://github.com/Faisal-Qahtani/about-jamaa/releases/download/v2.0.2/app-release.apk";
 
 export const getNavItems = (lang: Language): NavItem[] => {
   const t = TRANSLATIONS[lang];
